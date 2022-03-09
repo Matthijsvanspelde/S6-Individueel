@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SptGqQMd+ylWSTz7ZOKKYlmOpHPIz+uLMMva65OoPmBuwEacdhmzpYaQt6Y1PepLHamZiRbNisU/3qIrliF58Q==",
+  "dgSpecHash": "CUye0+fdDKl22IciQJP2nkc5MKOxEIjiVrBuBj8g1VS7Z3EYC3h7tF4cTa2GbcdkxEVRlY4eC4K0I1WRBiXa2w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\Assetservice\\Assetservice\\Assetservice.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\Matth\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Matth\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\Matth\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Matth\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
     "C:\\Users\\Matth\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Matth\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Matth\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
