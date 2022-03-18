@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Assetservice.Data
 {
-    public static class PrepDb
+    public static class AssetMockDb
     {
         public static void PrepPopulation(IApplicationBuilder app) 
         {

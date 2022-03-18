@@ -60,7 +60,7 @@ namespace Assetservice
                 endpoints.MapControllers();
             });
 
-            PrepDb.PrepPopulation(app);
+            AssetMockDb.PrepPopulation(app);
         }
     }
 }
