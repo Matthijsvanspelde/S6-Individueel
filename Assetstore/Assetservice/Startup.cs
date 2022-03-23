@@ -1,4 +1,5 @@
 using Assetservice.Data;
+using AssetService.SyncDataServices.HTTP;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,13 +31,19 @@ namespace Assetservice
         {
             services.AddDbContext<AppDbContext>(opt => 
                 opt.UseInMemoryDatabase("InMem"));
+
             services.AddScoped<IAssetRepository, AssetRepository>();
+
+            services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Assetservice", Version = "v1" });
             });
+
+            Console.WriteLine($"--> UserService endpoint: {Configuration["UserService"]}");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

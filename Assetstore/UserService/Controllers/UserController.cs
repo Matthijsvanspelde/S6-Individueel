@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using UserService.Data;
 using UserService.Dtos;
@@ -37,15 +38,23 @@ namespace UserService.Controllers
             return NotFound();
         }
 
-        [HttpPost]
-        public ActionResult<UserReadDto> CreateUser(UserCreateDto userCreateDto)
-        {
-            var userModel = _mapper.Map<User>(userCreateDto);
-            _repository.CreateUser(userModel);
-            _repository.SaveChanges();
+        //[HttpPost]
+        //public ActionResult<UserReadDto> CreateUser(UserCreateDto userCreateDto)
+        //{
+        //    var userModel = _mapper.Map<User>(userCreateDto);
+        //    _repository.CreateUser(userModel);
+        //    _repository.SaveChanges();
 
-            var userReadDto = _mapper.Map<UserReadDto>(userModel);
-            return CreatedAtRoute(nameof(GetUserById), new { Id = userReadDto.Id }, userReadDto);
+        //    var userReadDto = _mapper.Map<UserReadDto>(userModel);
+        //    return CreatedAtRoute(nameof(GetUserById), new { Id = userReadDto.Id }, userReadDto);
+        //}
+
+        [HttpPost]
+        public ActionResult CreateUser()
+        {
+            Console.WriteLine("--> Inbound POST # User Service");
+
+            return Ok("Inbound test of from User Controller");
         }
     }
 }

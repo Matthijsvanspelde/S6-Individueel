@@ -1,9 +1,12 @@
 ﻿using Assetservice.Data;
 using Assetservice.Dtos;
 using Assetservice.Models;
+using AssetService.SyncDataServices.HTTP;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Assetservice.Controllers
 {
@@ -13,10 +16,16 @@ namespace Assetservice.Controllers
     {
         private readonly IAssetRepository _repository;
         private readonly IMapper _mapper;
-        public AssetController(IAssetRepository repository, IMapper mapper)
+        private readonly ICommandDataClient _commandDataClient;
+
+        public AssetController(
+            IAssetRepository repository, 
+            IMapper mapper, 
+            ICommandDataClient commandDataClient)
         {
             _repository = repository;
             _mapper = mapper;
+            _commandDataClient = commandDataClient;
         }
 
         [HttpGet]
@@ -38,13 +47,23 @@ namespace Assetservice.Controllers
         }
 
         [HttpPost]
-        public ActionResult<AssetReadDto> CreateAsset(AssetCreateDto assetCreateDto)
+        public async Task<ActionResult<AssetReadDto>> CreateAsset(AssetCreateDto assetCreateDto)
         {
             var assetModel = _mapper.Map<Asset>(assetCreateDto);
             _repository.CreateAsset(assetModel);
             _repository.SaveChanges();
 
             var assetReadDto = _mapper.Map<AssetReadDto>(assetModel);
+
+            try
+            {
+                await _commandDataClient.SendAssetToCommand(assetReadDto);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"--> Could not send synchronously: {e.Message}");
+            }
+
             return CreatedAtRoute(nameof(GetAssetById), new { Id = assetReadDto.Id}, assetReadDto);
         }
     }

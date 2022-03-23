@@ -24,7 +24,9 @@ namespace UserService
         {
             services.AddDbContext<AppDbContext>(opt =>
                 opt.UseInMemoryDatabase("InMem"));
+
             services.AddScoped<IUserRepository, UserRepository>();
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
             services.AddSwaggerGen(c =>
