@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\Assetstore\\UserService\\UserService.csproj": {}
+    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\UserService\\UserService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\Assetstore\\UserService\\UserService.csproj": {
+    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\UserService\\UserService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\Assetstore\\UserService\\UserService.csproj",
+        "projectUniqueName": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\UserService\\UserService.csproj",
         "projectName": "UserService",
-        "projectPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\Assetstore\\UserService\\UserService.csproj",
+        "projectPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\UserService\\UserService.csproj",
         "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\Assetstore\\UserService\\obj\\",
+        "outputPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\UserService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -6112,11 +6112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\Assetstore\\Assetservice\\Assetservice.csproj",
-      "projectName": "Assetservice",
-      "projectPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\Assetstore\\Assetservice\\Assetservice.csproj",
+      "projectUniqueName": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj",
+      "projectName": "AssetService",
+      "projectPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj",
       "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\Assetstore\\Assetservice\\obj\\",
+      "outputPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config",
