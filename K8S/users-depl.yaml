@@ -1,31 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: assets-depl
+  name: users-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: assetservice
+      app: userservice
   template:
     metadata:
       labels:
-        app: assetservice
+        app: userservice
     spec:
       containers:
-        - name: assetservice
-          image: matthijs1999/assetservice:latest
+        - name: userservice
+          image: matthijs1999/userservice:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: assets-clusterip-srv
+  name: users-clusterip-srv
 spec:
   type: ClusterIP
   selector:
-    app: assetservice
+    app: userservice
   ports:
-  - name: assetservice
+  - name: userservice
     protocol: TCP
     port: 80
     targetPort: 80
