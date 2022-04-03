@@ -1,9 +1,13 @@
 <template>
-  <div class="about">
-    <div v-for="asset in assets" v-bind:key="asset.id">
+<div class="container">
+  <h1>Browse assets</h1>
+  <div class="box">
+    <div v-for="asset in assets" v-bind:key="asset.id" >
       <AssetTile :title="asset.title" :description="asset.description"/>
-    </div> 
+    </div>
   </div>
+</div>
+   
 </template>
 
 <script>
@@ -36,4 +40,14 @@ export default {
 </script>
 
 <style>
+
+.container {
+  margin-top: 24px;
+}
+.box {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 </style>

@@ -1,8 +1,18 @@
 <template>
   <div class="about">
-    <h1>Upload</h1>
+    <UploadForm/>
   </div>
 </template>
+
+<script>
+import UploadForm from "@/components/UploadForm.vue";
+export default {
+  name: "HomeView",
+  components: {
+    UploadForm
+  }
+}
+</script>
 
 <style>
 @media (min-width: 1024px) {

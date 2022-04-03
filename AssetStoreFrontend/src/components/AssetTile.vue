@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="item">
       <h3>{{this.title}}</h3>
       <p>{{this.description}}</p>
     </div>
@@ -17,21 +17,18 @@ export default {
 </script>
 
 <style scoped>
-
-.card {
-  padding: 16px;
-  text-align: center;
-  background-color: #ffffff;
-  margin: 50px;
-  border-radius: 6px;
+.item {
+  width: 228px;
+  height: 228px;
+  background-color: rgb(255, 255, 255);
+  padding: 6px;
+  border-radius: 4px;
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-  left: 0;
-  transition: 0.2s;
+  transition: transform .1s; /* Animation */
 }
 
-.card:hover {
-  left: 10px;
+.item:hover {
+  transform: scale(1.05);
   cursor: pointer;
 }
-
 </style>
