@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\UserService\\UserService.csproj": {}
+    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\userservice\\UserService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\UserService\\UserService.csproj": {
+    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\userservice\\UserService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\UserService\\UserService.csproj",
+        "projectUniqueName": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\userservice\\UserService.csproj",
         "projectName": "UserService",
-        "projectPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\UserService\\UserService.csproj",
+        "projectPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\userservice\\UserService.csproj",
         "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\UserService\\obj\\",
+        "outputPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\userservice\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,12 @@
               "version": "[11.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.14, )"
             },

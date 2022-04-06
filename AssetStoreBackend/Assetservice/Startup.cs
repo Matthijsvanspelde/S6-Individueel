@@ -13,12 +13,14 @@ namespace Assetservice
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IConfiguration Configuration { get; }
+        private readonly IWebHostEnvironment _env;
+
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            _env = env;
         }
-
-        public IConfiguration Configuration { get; }
 
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -34,9 +36,19 @@ namespace Assetservice
                                   });
             });
 
-            services.AddDbContext<AppDbContext>(opt => 
+            if (_env.IsProduction())
+            {
+                Console.WriteLine("--> Using Sql Server Db");
+                services.AddDbContext<AppDbContext>(opt => 
+                    opt.UseSqlServer(Configuration.GetConnectionString("AssetsConnection")));
+            }
+            else
+            {
+                Console.WriteLine("--> Using InMem Db");
+                services.AddDbContext<AppDbContext>(opt =>
                 opt.UseInMemoryDatabase("InMem"));
-
+            }
+            
             services.AddScoped<IAssetRepository, AssetRepository>();
 
             services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
@@ -74,7 +86,7 @@ namespace Assetservice
                 endpoints.MapControllers();
             });
 
-            AssetMockDb.PrepPopulation(app);
+            AssetMockDb.PrepPopulation(app, env.IsProduction());
         }
     }
 }

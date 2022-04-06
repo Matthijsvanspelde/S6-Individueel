@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace UserService.Models
 {
@@ -11,5 +12,9 @@ namespace UserService.Models
         public string Username { get; set; }
         [Required]
         public string Biography { get; set; }
+
+        //Relationships
+        [Required]
+        public ICollection<Asset> Assets { get; set; } = new List<Asset>();
     }
 }

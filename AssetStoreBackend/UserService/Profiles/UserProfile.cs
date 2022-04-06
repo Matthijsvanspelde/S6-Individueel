@@ -8,6 +8,7 @@ namespace UserService.Profiles
     {
         public UserProfile()
         {
+            CreateMap<Asset, AssetReadDto>();
             CreateMap<User, UserReadDto>();
             CreateMap<UserCreateDto, User>();
         }

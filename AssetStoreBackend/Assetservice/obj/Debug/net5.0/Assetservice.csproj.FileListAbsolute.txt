@@ -135,7 +135,6 @@ C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bi
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\AssetService.runtimeconfig.json
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\AssetService.runtimeconfig.dev.json
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\AssetService.dll
-C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\ref\AssetService.dll
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\AssetService.pdb
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
@@ -194,3 +193,6 @@ C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\ob
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\AssetService.pdb
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\AssetService.genruntimeconfig.cache
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\appsettings.Production.json
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\refint\AssetService.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll

@@ -37,5 +37,10 @@ namespace UserService.Data
         {
             return (_context.SaveChanges() >= 0);
         }
+
+        public bool AssetExists(int assetId)
+        {
+            return _context.Assets.Any(a => a.Id == assetId);
+        }
     }
 }
