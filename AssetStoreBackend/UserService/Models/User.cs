@@ -12,9 +12,5 @@ namespace UserService.Models
         public string Username { get; set; }
         [Required]
         public string Biography { get; set; }
-
-        //Relationships
-        [Required]
-        public ICollection<Asset> Assets { get; set; } = new List<Asset>();
     }
 }

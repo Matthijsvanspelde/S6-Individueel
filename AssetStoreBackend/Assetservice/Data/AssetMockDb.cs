@@ -31,24 +31,7 @@ namespace Assetservice.Data
                 catch (Exception ex)
                 {
                     Console.WriteLine($"--> Could not run migrations: {ex.Message}");
-                }
-                
-            }
-
-            if (!context.Assets.Any())
-            {
-                Console.WriteLine("Seeding data...");
-
-                context.Assets.AddRange(
-                    new Asset() { Title = "ButtonClick.wav", Description = "Sound of a button click."},
-                    new Asset() { Title = "Tree.obj", Description = "Tree 3D model." },
-                    new Asset() { Title = "Character.png", Description = "Character sprite sheet." }
-                );
-                context.SaveChanges();
-            }
-            else
-            {
-                Console.WriteLine("We already have data.");
+                }                
             }
         }
     }

@@ -9,6 +9,5 @@ namespace UserService.Data
         IEnumerable<User> GetAllUser();
         User GetUserById(int id);
         void CreateUser(User user);
-        bool AssetExists(int assetId);
     }
 }

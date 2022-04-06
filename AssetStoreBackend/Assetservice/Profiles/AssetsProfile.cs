@@ -1,5 +1,7 @@
 ﻿using Assetservice.Dtos;
 using Assetservice.Models;
+using AssetService.Dtos;
+using AssetService.Models;
 using AutoMapper;
 
 namespace Assetservice.Profiles
@@ -10,6 +12,7 @@ namespace Assetservice.Profiles
         {
             CreateMap<Asset, AssetReadDto>();
             CreateMap<AssetCreateDto, Asset>();
+            CreateMap<User, UserReadDto>();
         }
     }
 }

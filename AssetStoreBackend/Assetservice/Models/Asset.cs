@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AssetService.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Assetservice.Models
 {
@@ -11,5 +12,11 @@ namespace Assetservice.Models
         public string Title { get; set; }
         [Required]
         public string Description { get; set; }
+        [Required]
+        public string FileLocation { get; set; }
+        [Required]
+        public int UserId { get; set; }
+        [Required]
+        public User User { get; set; }
     }
 }
