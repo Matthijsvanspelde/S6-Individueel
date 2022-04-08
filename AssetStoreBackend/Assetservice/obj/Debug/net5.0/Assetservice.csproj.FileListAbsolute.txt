@@ -196,3 +196,11 @@ C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bi
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\refint\AssetService.dll
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Humanizer.dll
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Azure.Core.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Azure.Storage.Blobs.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Azure.Storage.Common.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Azure.Storage.Files.Shares.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Microsoft.Azure.ConfigurationManager.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\System.IO.Hashing.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\System.Memory.Data.dll

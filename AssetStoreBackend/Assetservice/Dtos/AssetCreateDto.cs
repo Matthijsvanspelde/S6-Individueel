@@ -1,12 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace Assetservice.Dtos
 {
     public class AssetCreateDto
     {
         [Required]
-        public string Title { get; set; }
+        public string Name { get; set; }
         [Required]
         public string Description { get; set; }
+        [Required]
+        public IFormFile File { get; set; }
     }
 }

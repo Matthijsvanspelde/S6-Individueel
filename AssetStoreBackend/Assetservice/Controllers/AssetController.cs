@@ -3,7 +3,10 @@ using Assetservice.Dtos;
 using Assetservice.Models;
 using AssetService.SyncDataServices.HTTP;
 using AutoMapper;
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -14,6 +17,7 @@ namespace Assetservice.Controllers
     [ApiController]
     public class AssetController : ControllerBase
     {
+        private readonly IConfiguration _configuration;
         private readonly IAssetRepository _repository;
         private readonly IMapper _mapper;
         private readonly ICommandDataClient _commandDataClient;
@@ -21,8 +25,10 @@ namespace Assetservice.Controllers
         public AssetController(
             IAssetRepository repository, 
             IMapper mapper, 
-            ICommandDataClient commandDataClient)
+            ICommandDataClient commandDataClient,
+            IConfiguration configuration)
         {
+            _configuration = configuration;
             _repository = repository;
             _mapper = mapper;
             _commandDataClient = commandDataClient;
@@ -47,9 +53,26 @@ namespace Assetservice.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<AssetReadDto>> CreateAsset(AssetCreateDto assetCreateDto)
+        public async Task<ActionResult<AssetReadDto>> CreateAsset([FromForm] AssetCreateDto assetCreateDto)
         {
+
+            var file = assetCreateDto.File;
+            if (file.Length > 0)
+            {
+                var container = new BlobContainerClient(_configuration.GetConnectionString("AzureConnectionString"), "asset-container");
+                var createResponse = await container.CreateIfNotExistsAsync();
+                if (createResponse != null && createResponse.GetRawResponse().Status == 201)
+                    await container.SetAccessPolicyAsync(Azure.Storage.Blobs.Models.PublicAccessType.Blob);
+                var blob = container.GetBlobClient(file.FileName);
+                await blob.DeleteIfExistsAsync(DeleteSnapshotsOption.IncludeSnapshots);
+                using (var fileStream = file.OpenReadStream())
+                {
+                    await blob.UploadAsync(fileStream, new BlobHttpHeaders { ContentType = file.ContentType });
+                }
+            }
+
             var assetModel = _mapper.Map<Asset>(assetCreateDto);
+            assetModel.FileName = file.FileName.ToString();
             _repository.CreateAsset(assetModel);
             _repository.SaveChanges();
 
