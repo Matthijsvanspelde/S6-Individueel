@@ -204,3 +204,4 @@ C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bi
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\System.IO.Hashing.dll
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\System.Memory.Data.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\bin\Debug\net5.0\RabbitMQ.Client.dll

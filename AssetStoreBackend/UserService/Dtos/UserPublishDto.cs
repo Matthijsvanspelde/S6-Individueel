@@ -1,10 +1,10 @@
-﻿namespace AssetService.Dtos
+﻿namespace UserService.Dtos
 {
-    public class UserReadDto
+    public class UserPublishDto
     {
         public int Id { get; set; }
         public string Username { get; set; }
         public string Biography { get; set; }
-        public int ExternalId { get; set; }
+        public string Event { get; set; }
     }
 }

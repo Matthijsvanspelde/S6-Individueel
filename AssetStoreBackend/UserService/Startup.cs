@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
+using UserService.AsyncDataServices;
 using UserService.Data;
 
 namespace UserService
@@ -39,6 +40,8 @@ namespace UserService
             }
 
             services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddSingleton<IMessageBusClient, MessageBusClient>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
