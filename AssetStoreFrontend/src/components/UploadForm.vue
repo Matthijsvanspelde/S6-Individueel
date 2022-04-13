@@ -1,16 +1,23 @@
 <template>
-    <form ref="form" v-on:submit.prevent="onSubmit" enctype="multipart/form-data">
-        <h1>Upload</h1>
-        <label>name</label><br/>
-        <input type="text" class="inputField" v-model="assetData.name"/>
+
+    <form ref="form" v-on:submit.prevent="onSubmit" enctype="multipart/form-data" class = 'card p-3 bg-light'>
+        <h3>Upload new asset</h3>
+        <label>Username</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" v-model="assetData.name">
+        </div>
+        <label>description</label>
+        <div class="input-group">
+            <textarea class="form-control" aria-label="With textarea" v-model="assetData.description"></textarea>
+        </div>
+
         <br/>
-        <label>description</label><br/>
-        <textarea class="inputField" v-model="assetData.description"></textarea>
-        <br/>
-        <label>File</label><br/>
-        <input type="file" @change="onFileChange($event)"/>
-        <input type="submit" value="create"/>
+        
+        <label>File</label>
+        <input type="file" @change="onFileChange($event)"/><br/>
+        <button type="submit" class="btn btn-primary">Create</button>
     </form>
+
 </template>
 
 <script>
@@ -49,11 +56,4 @@ export default {
 </script>
 
 <style scoped>
-.inputField {
-    padding: 6px;
-    border: none;
-    border-radius: 6px;
-    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-    font-family: Arial, Helvetica, sans-serif;
-}
 </style>

@@ -1,4 +1,6 @@
 using Assetservice.Data;
+using AssetService.AsyncDataServices;
+using AssetService.EventProcessing;
 using AssetService.SyncDataServices.HTTP;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -57,6 +59,11 @@ namespace Assetservice
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
+
+            services.AddHostedService<MessageBusSubscriber>();
+
+            services.AddSingleton<IEventProcessor, EventProcessor>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Assetservice", Version = "v1" });

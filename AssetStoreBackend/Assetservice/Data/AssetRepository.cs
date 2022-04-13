@@ -1,4 +1,5 @@
 ﻿using Assetservice.Models;
+using AssetService.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,28 @@ namespace Assetservice.Data
             _context.Add(asset);
         }
 
+        public void CreateUser(User user)
+        {
+            if (user == null)
+            {
+                throw new ArgumentNullException(nameof(user));
+            }
+            _context.Add(user);
+        }
+
+        public bool ExternalUserExists(int externalUserId)
+        {
+            return _context.Users.Any(u => u.ExternalId == externalUserId);
+        }
+
         public IEnumerable<Asset> GetAllAssets()
         {
             return _context.Assets.ToList();
+        }
+
+        public IEnumerable<User> GetAllUsers()
+        {
+            return _context.Users.ToList();
         }
 
         public Asset GetAssetById(int id)

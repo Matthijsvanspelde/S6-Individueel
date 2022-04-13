@@ -41,13 +41,4 @@ export default {
 
 <style>
 
-.container {
-  margin-top: 24px;
-}
-.box {
-  width: 100%;
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
 </style>

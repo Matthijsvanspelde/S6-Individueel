@@ -13,6 +13,8 @@ namespace Assetservice.Profiles
             CreateMap<Asset, AssetReadDto>();
             CreateMap<AssetCreateDto, Asset>();
             CreateMap<User, UserReadDto>();
+            CreateMap<UserPublishDto, User>()
+                .ForMember(dest => dest.ExternalId, opt => opt.MapFrom(src => src.Id));
         }
     }
 }

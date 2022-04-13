@@ -4,64 +4,34 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header>
-    <nav>
-      <ul>
-        <li><RouterLink to="/">Home</RouterLink></li>
-        <li><RouterLink to="/upload">Upload</RouterLink></li>
-      </ul>
-    </nav>
-  </header>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Asset Store</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"><RouterLink to="/">Home</RouterLink></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"><RouterLink to="/upload">Upload</RouterLink></a>
+      </li>
+    </ul>
+  </div>
+</nav>
   <RouterView />
 </template>
 
 <style>
 @import "@/assets/base.css";
 
-body {
-  background-color: #F4F4F4;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-ul {
-  z-index: 10;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #ffffff;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-}
-
-li {
-  float: left;
-}
-
 li a {
-  display: block;
-  color: #333;
-  text-align: center;
-  padding: 12px 14px;
+  color: rgba(0,0,0,.9);
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
-  background-color: #ddd;
-}
-
-li a.active {
-  color: white;
-  background-color: #04AA6D;
+li a:hover {
+  color: rgba(0,0,0,.9);
 }
 </style>
