@@ -1,7 +1,8 @@
 <template>
-  <div class="about">
-    <UploadForm/>
-  </div>
+<div class="d-flex flex-column justify-content-center">
+  <div class="p-2"><UploadForm/></div>
+</div>
+  
 </template>
 
 <script>
@@ -21,5 +22,10 @@ export default {
     display: flex;
     align-items: center;
   }
+}
+
+
+.container {
+  max-width: 900px !important;
 }
 </style>

@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Asset Store</a>
+  <a class="navbar-brand">Asset Store</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,7 +20,10 @@ import { RouterLink, RouterView } from "vue-router";
     </ul>
   </div>
 </nav>
-  <RouterView />
+<div class="container">
+  <RouterView />  
+</div>
+  
 </template>
 
 <style>
@@ -33,5 +36,13 @@ li a {
 
 li a:hover {
   color: rgba(0,0,0,.9);
+}
+
+body {
+  background-color: rgb(238, 238, 238) !important;
+}
+
+nav {
+  margin-bottom: 14px;
 }
 </style>

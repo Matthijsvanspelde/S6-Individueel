@@ -1,22 +1,29 @@
 <template>
-
-    <form ref="form" v-on:submit.prevent="onSubmit" enctype="multipart/form-data" class = 'card p-3 bg-light'>
-        <h3>Upload new asset</h3>
-        <label>Username</label>
+<div class="card">
+    <h5 class="card-header">
+            Create new asset
+    </h5>
+    <div class="card-body">
+        <form ref="form" v-on:submit.prevent="onSubmit" enctype="multipart/form-data">
+        
+        <label>Title</label>
         <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" v-model="assetData.name">
         </div>
-        <label>description</label>
+        <label>Description</label>
         <div class="input-group">
-            <textarea class="form-control" aria-label="With textarea" v-model="assetData.description"></textarea>
+            <textarea class="form-control" aria-label="With textarea" v-model="assetData.description" rows="12"></textarea>
         </div>
 
         <br/>
         
-        <label>File</label>
-        <input type="file" @change="onFileChange($event)"/><br/>
-        <button type="submit" class="btn btn-primary">Create</button>
-    </form>
+        <label>File</label><br/>
+        <input class="form-control" type="file" @change="onFileChange($event)"/><br/>
+        <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+
 
 </template>
 

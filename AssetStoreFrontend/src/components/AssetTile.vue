@@ -1,8 +1,13 @@
 <template>
-    <div class="item">
-      <h3>{{this.title}}</h3>
-      <p>{{this.description}}</p>
-    </div>
+<div>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Asset Name</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+
 </template>
 
 <script>
@@ -30,5 +35,14 @@ export default {
 .item:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+
+.card {
+  margin-bottom: 14px;
+}
+
+.card:hover{
+    transform:scale(1.025);
+    cursor: pointer;
 }
 </style>

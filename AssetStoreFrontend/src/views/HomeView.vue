@@ -1,12 +1,13 @@
-<template>
-<div class="container">
-  <h1>Browse assets</h1>
-  <div class="box">
-    <div v-for="asset in assets" v-bind:key="asset.id" >
-      <AssetTile :title="asset.title" :description="asset.description"/>
-    </div>
+<template>  
+<h5>Browse assets</h5>
+  <div class="row row-cols-2" >
+    <AssetTile  class="col-4"/>
+    <AssetTile  class="col-4"/>
+    <AssetTile  class="col-4"/>
+    <AssetTile  class="col-4"/>
+    <AssetTile  class="col-4"/>
+    <AssetTile  class="col-4"/>
   </div>
-</div>
    
 </template>
 
@@ -40,5 +41,7 @@ export default {
 </script>
 
 <style>
-
+.container {
+  max-width: 900px !important;
+}
 </style>
