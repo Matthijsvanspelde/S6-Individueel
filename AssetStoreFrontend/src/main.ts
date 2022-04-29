@@ -5,8 +5,11 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
+import StorefrontIcon from 'vue-material-design-icons/Storefront.vue';
+
 const app = createApp(App);
-app.use(VueAxios, axios)
+app.use(VueAxios, axios);
 app.use(router);
+app.use(StorefrontIcon);
 
 app.mount("#app");
