@@ -46,7 +46,7 @@ stages:
   displayName: Deploy to Dev
   dependsOn: Build
   variables: 
-    acrsecret: asauth
+    acrsecret: arc-secret
   jobs:
   - deployment: Deploy
     displayName: Deploy to AKS
