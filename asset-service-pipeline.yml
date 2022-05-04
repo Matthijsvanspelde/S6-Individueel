@@ -48,29 +48,31 @@ stages:
   variables: 
     acrsecret: asauth
   jobs:
-  - job: Deploy
+  - deployment: Deploy
     displayName: Deploy to AKS
+    environment: 'Dev.default'
     pool:
       vmImage: ubuntu-latest
-    steps: 
-    - task: DownloadPipelineArtifact@2
-      inputs:
-        buildType: 'current'
-        artifactName: 'manifests'
-        targetPath: '$(Pipeline.Workspace)/manifests'
-    - task: KubernetesManifest@0
-      inputs:
-        action: 'createSecret'
-        kubernetesServiceConnection: 'AS_AKS-default'
-        namespace: 'default'
-        secretType: 'dockerRegistry'
-        secretName: '$(acrsecret)'
-        dockerRegistryEndpoint: 'AssetStoreRegistry'
-    - task: KubernetesManifest@0
-      inputs:
-        action: 'deploy'
-        kubernetesServiceConnection: 'AS_AKS-default'
-        namespace: 'default'
-        manifests: |
-          $(Pipeline.Workspace)/manifests/assets-depl.yaml
-          $(Pipeline.Workspace)/manifests/assets-service.yaml
+    strategy:
+      runOnce:
+        deploy:         
+          steps: 
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: 'current'
+              artifactName: 'manifests'
+              targetPath: '$(Pipeline.Workspace)/manifests'
+          - task: KubernetesManifest@0
+            inputs:
+              action: 'createSecret'
+              namespace: 'default'
+              secretType: 'dockerRegistry'
+              secretName: '$(acrsecret)'
+              dockerRegistryEndpoint: 'AssetStoreRegistry'
+          - task: KubernetesManifest@0
+            inputs:
+              action: 'deploy'
+              namespace: 'default'
+              manifests: |
+                $(Pipeline.Workspace)/manifests/assets-depl.yaml
+                $(Pipeline.Workspace)/manifests/assets-service.yaml
