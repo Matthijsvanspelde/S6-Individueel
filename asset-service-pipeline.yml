@@ -72,5 +72,5 @@ stages:
         kubernetesServiceConnection: 'AS_AKS-default'
         namespace: 'default'
         manifests: |
-          '$(Pipeline.Workspace)/manifests/assets-depl.yaml'
-          '$(Pipeline.Workspace)/manifests/assets-service.yaml'
+          $(Pipeline.Workspace)/manifests/assets-depl.yaml
+          $(Pipeline.Workspace)/manifests/assets-service.yaml
