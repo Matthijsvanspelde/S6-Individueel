@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "bootstrap-icons-vue": "^1.8.1",
     "bootstrap-vue": "^2.21.2",
     "bootstrap-vue-3": "^0.1.10",
     "vue": "^3.2.31",

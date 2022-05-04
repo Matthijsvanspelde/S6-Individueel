@@ -1,4 +1,5 @@
-<template>  
+<template>
+
 <h5>Browse assets</h5>
   <div class="row row-cols-2" >
     <AssetTile  class="col-4"/>
@@ -42,6 +43,6 @@ export default {
 
 <style>
 .container {
-  max-width: 900px !important;
+  
 }
 </style>

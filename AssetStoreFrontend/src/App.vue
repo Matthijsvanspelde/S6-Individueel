@@ -32,4 +32,9 @@ body {
 nav {
   margin-bottom: 14px;
 }
+
+.btn-primary {
+  background-color: #FF2449 !important;
+  border: #FF2449 !important;
+}
 </style>
