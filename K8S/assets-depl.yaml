@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: assetservice
-          image: matthijs1999/assetservice:latest
+          image: assetstoreregistry.azurecr.io/assetservice:latest
 ---
 apiVersion: v1
 kind: Service
