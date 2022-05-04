@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: assetservice
-          image: assetservice:latest
+          image: matthijs1999/assetservice:latest
 ---
 apiVersion: v1
 kind: Service
