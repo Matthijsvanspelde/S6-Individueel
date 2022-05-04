@@ -39,7 +39,7 @@ stages:
           latest
     - task: PublishPipelineArtifact@1
       inputs:
-        targetPath: '$(Pipeline.Workspace)/k8s'
+        targetPath: '$(Build.SourcesDirectory)/k8s'
         artifact: 'manifests'
         publishLocation: 'pipeline'
 - stage: Deploy
