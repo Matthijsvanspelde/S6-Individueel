@@ -1,31 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: users-depl
+  name: auth-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: userservice
+      app: authservice
   template:
     metadata:
       labels:
-        app: userservice
+        app: authservice
     spec:
       containers:
-        - name: userservice
-          image: assetstoreregistry.azurecr.io/userservice:latest
+        - name: authservice
+          image: assetstoreregistry.azurecr.io/authservice:latest
+      imagePullSecrets:
+        - name: acr-secret
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: users-clusterip-srv
+  name: auth-clusterip-srv
 spec:
   type: ClusterIP
   selector:
-    app: userservice
+    app: authservice
   ports:
-  - name: userservice
+  - name: authservice
     protocol: TCP
     port: 80
     targetPort: 80

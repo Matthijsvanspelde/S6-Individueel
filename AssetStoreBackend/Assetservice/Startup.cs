@@ -40,19 +40,10 @@ namespace Assetservice
                                   });
             });
 
-            if (_env.IsProduction())
-            {
-                Console.WriteLine("--> Using Sql Server Db");
-                services.AddDbContext<AppDbContext>(opt => 
-                    opt.UseSqlServer(Configuration.GetConnectionString("AssetsConnection")));
-            }
-            else
-            {
-                Console.WriteLine("--> Using InMem Db");
-                services.AddDbContext<AppDbContext>(opt =>
-                opt.UseInMemoryDatabase("InMem"));
-            }
-            
+            Console.WriteLine("--> Using Sql Server Db");
+            services.AddDbContext<AppDbContext>(opt => 
+                opt.UseSqlServer(Configuration.GetConnectionString("AssetsConnection")));
+
             services.AddScoped<IAssetRepository, AssetRepository>();
 
             services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
