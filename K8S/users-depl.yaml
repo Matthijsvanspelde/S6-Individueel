@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: userservice
-          image: assetstoreregistry.azurecr.io/userservice:latest
+          image: assetstoreregistry.azurecr.io/userservice:v0.1
 ---
 apiVersion: v1
 kind: Service
