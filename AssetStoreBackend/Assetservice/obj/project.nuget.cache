@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NehO/wWfqYzey5N1BT3hKdhWnBq/2EAQNJj2qlD0UjXeuH/175tzclUWDaZMzRh61k88ddVQO7HiN/yKq4WWcQ==",
+  "dgSpecHash": "irhlnnSyv5isEpokUzfbLlkR6OrzJXDlZmmUFdO3inhUGbvotbQo31eFOKPu7KNjpRY7KdH1aJAOxjYsqBaPUw==",
   "success": true,
-  "projectFilePath": "C:\\users\\matth\\documents\\Github\\S6-individueel\\assetstorebackend\\assetservice\\AssetService.csproj",
+  "projectFilePath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matth\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Matth\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

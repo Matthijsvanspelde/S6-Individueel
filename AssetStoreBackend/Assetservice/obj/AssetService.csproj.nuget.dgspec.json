@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\users\\matth\\documents\\Github\\S6-individueel\\assetstorebackend\\assetservice\\AssetService.csproj": {}
+    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj": {}
   },
   "projects": {
-    "C:\\users\\matth\\documents\\Github\\S6-individueel\\assetstorebackend\\assetservice\\AssetService.csproj": {
+    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\users\\matth\\documents\\Github\\S6-individueel\\assetstorebackend\\assetservice\\AssetService.csproj",
+        "projectUniqueName": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj",
         "projectName": "AssetService",
-        "projectPath": "C:\\users\\matth\\documents\\Github\\S6-individueel\\assetstorebackend\\assetservice\\AssetService.csproj",
+        "projectPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj",
         "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
-        "outputPath": "C:\\users\\matth\\documents\\Github\\S6-individueel\\assetstorebackend\\assetservice\\obj\\",
+        "outputPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config",
