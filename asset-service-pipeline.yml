@@ -36,7 +36,7 @@ stages:
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
-          v0.1
+          latest
     - task: PublishPipelineArtifact@1
       inputs:
         targetPath: '$(Build.SourcesDirectory)/K8S'
