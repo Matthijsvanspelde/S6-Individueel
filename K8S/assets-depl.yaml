@@ -6,14 +6,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: assets-depl
+      app: assetservice
   template:
     metadata:
       labels:
-        app: assets-depl
+        app: assetservice
     spec:
       containers:
-        - name: assets-depl
+        - name: assetservice
           image: assetstoreregistry.azurecr.io/assetservice:v0.1
           ports:
           - containerPort: 80
@@ -21,10 +21,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: assets-depl
+  name: assetservice
 spec:
   type: ClusterIP
   ports:
   - port: 80
   selector:
-    app: assets-depl
+    app: assetservice
