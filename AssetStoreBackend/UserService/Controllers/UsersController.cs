@@ -14,13 +14,13 @@ namespace UserService.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly IUserRepository _repository;
         private readonly IMapper _mapper;
         private readonly IMessageBusClient _messageBusClient;
 
-        public UserController(IUserRepository repository, IMapper mapper, IMessageBusClient messageBusClient)
+        public UsersController(IUserRepository repository, IMapper mapper, IMessageBusClient messageBusClient)
         {
             _repository = repository;
             _mapper = mapper;
@@ -30,9 +30,8 @@ namespace UserService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<UserReadDto>> GetUsers()
         {
-            //var assets = _repository.GetAllUser();
-            //return Ok(_mapper.Map<IEnumerable<UserReadDto>>(assets));
-            return Ok("Het werkt!!!!!!!");
+            var assets = _repository.GetAllUser();
+            return Ok(_mapper.Map<IEnumerable<UserReadDto>>(assets));
         }
 
         [HttpGet("{id}", Name = "GetUserById")]
