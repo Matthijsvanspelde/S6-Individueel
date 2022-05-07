@@ -30,8 +30,9 @@ namespace UserService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<UserReadDto>> GetUsers()
         {
-            var assets = _repository.GetAllUser();
-            return Ok(_mapper.Map<IEnumerable<UserReadDto>>(assets));
+            //var assets = _repository.GetAllUser();
+            //return Ok(_mapper.Map<IEnumerable<UserReadDto>>(assets));
+            return Ok("Het werkt!!!!!!!");
         }
 
         [HttpGet("{id}", Name = "GetUserById")]
