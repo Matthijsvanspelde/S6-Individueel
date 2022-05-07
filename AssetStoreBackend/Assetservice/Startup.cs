@@ -40,7 +40,7 @@ namespace Assetservice
                                   });
             });
 
-            Console.WriteLine("--> Using Sql Server Db");
+            Console.WriteLine("--> Using Sql Server Db :)");
             services.AddDbContext<AppDbContext>(opt => 
                 opt.UseSqlServer(Configuration.GetConnectionString("AssetsConnection")));
 
