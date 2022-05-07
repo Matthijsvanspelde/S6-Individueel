@@ -6,21 +6,21 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/use-regex: 'true'
 spec:
+  ingressClassName: nginx
   rules:
-    - host: assetstore.com
-      http:
+    - http:
         paths:
           - path: /api/asset
             pathType: Prefix
             backend:
               service:
-                name: assets-clusterip-srv
+                name: assets-depl
                 port:
                   number: 80
           - path: /api/user
             pathType: Prefix
             backend:
               service:
-                name: users-clusterip-srv
+                name: users-depl
                 port:
                   number: 80

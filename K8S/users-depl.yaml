@@ -6,14 +6,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: userservice
+      app: users-depl
   template:
     metadata:
       labels:
-        app: userservice
+        app: users-depl
     spec:
       containers:
-        - name: userservice
+        - name: users-depl
           image: assetstoreregistry.azurecr.io/userservice:v0.1
           ports:
           - containerPort: 80
@@ -23,9 +23,8 @@ kind: Service
 metadata:
   name: users-depl
 spec:
-  selector:
-    app: userservice
+  type: ClusterIP
   ports:
-    - port: 8765
-      targetPort: 9376
-  type: LoadBalancer
+  - port: 80
+  selector:
+    app: users-depl
