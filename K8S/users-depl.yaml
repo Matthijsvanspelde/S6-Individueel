@@ -21,13 +21,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: users-clusterip-srv
+  name: users-depl
 spec:
-  type: ClusterIP
   selector:
     app: userservice
   ports:
-  - name: userservice
-    protocol: TCP
-    port: 80
-    targetPort: 80
+    - port: 8765
+      targetPort: 9376
+  type: LoadBalancer
