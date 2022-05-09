@@ -75,6 +75,10 @@ namespace UserService
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "UserService v1"));
             }
+            if (env.IsProduction())
+            {
+                app.UsePathBase("/app1");
+            }
 
             app.UseHttpsRedirection();
             app.UseAuthentication();

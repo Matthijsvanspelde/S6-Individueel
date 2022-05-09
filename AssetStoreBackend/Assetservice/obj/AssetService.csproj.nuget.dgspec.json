@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj": {}
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj": {
+    "C:\\Users\\Matthijs\\Documents\\GitHub\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj",
+        "projectUniqueName": "C:\\Users\\Matthijs\\Documents\\GitHub\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj",
         "projectName": "AssetService",
-        "projectPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj",
-        "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\Assetservice\\obj\\",
+        "projectPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\S6-Individueel\\AssetStoreBackend\\Assetservice\\AssetService.csproj",
+        "packagesPath": "C:\\Users\\Matthijs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthijs\\Documents\\GitHub\\S6-Individueel\\AssetStoreBackend\\Assetservice\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matthijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -121,7 +121,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
