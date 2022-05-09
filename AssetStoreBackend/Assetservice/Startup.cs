@@ -72,6 +72,11 @@ namespace Assetservice
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Assetservice v1"));
             }
+            else
+            {
+                Console.WriteLine("Using Path Base: /app1");
+                app.UsePathBase("/app2");
+            }
 
             app.UseHttpsRedirection();
 
