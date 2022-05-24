@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: userservice
-          image: matthijs1999/userservice:latest
+          image: assetstoreregistry.azurecr.io/userservice:latest
           ports:
           - containerPort: 80
 ---
