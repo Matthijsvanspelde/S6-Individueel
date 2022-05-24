@@ -34,7 +34,7 @@ nav {
 }
 
 .btn-primary {
-  background-color: #FF2449 !important;
-  border: #FF2449 !important;
+  background-color: #326ce5 !important;
+  border: #326ce5 !important;
 }
 </style>

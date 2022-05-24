@@ -31,7 +31,7 @@ namespace AuthenticationService.Controllers
 
         [HttpPost]
         [Route("login")]
-        public async Task<IActionResult> Login([FromBody] UserLoginDto model)
+        public async Task<IActionResult> Login([FromForm] UserLoginDto model)
         {
             var user = await userManager.FindByNameAsync(model.Username);
             if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
@@ -70,7 +70,7 @@ namespace AuthenticationService.Controllers
 
         [HttpPost]
         [Route("register")]
-        public async Task<IActionResult> Register([FromBody] UserRegisterDto model)
+        public async Task<IActionResult> Register([FromForm] UserRegisterDto model)
         {
             var userExists = await userManager.FindByNameAsync(model.Username);
             if (userExists != null)
