@@ -23,7 +23,7 @@ kind: Service
 metadata:
   name: assetservice
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 80
   selector:
