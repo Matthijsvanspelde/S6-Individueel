@@ -42,6 +42,20 @@ stages:
         targetPath: '$(Build.SourcesDirectory)/K8S'
         artifact: 'manifests'
         publishLocation: 'pipeline'
+        
+- stage: SecurityTests
+  displayName: Test Security
+  jobs:
+  - job: AuthenticationServiceTests
+    displayName: AuthenticationService Tests
+    steps:
+    - task: VSTest@2
+      inputs:
+        testSelector: 'testRun'
+        searchFolder: '$(System.DefaultWorkingDirectory)/AssetStoreBackend/AuthenticationService.Tests'
+        codeCoverageEnabled: true
+
+
 - stage: Deploy
   displayName: Deploy to Dev
   dependsOn: Build
