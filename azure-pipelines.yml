@@ -45,20 +45,24 @@ stages:
         
 - stage: SecurityTests
   displayName: Test Security
+  dependsOn: Build
   jobs:
   - job: AuthenticationServiceTests
     displayName: AuthenticationService Tests
     steps:
-    - task: VSTest@2
+    - task: DotNetCoreCLI@2
+      displayName: 'dotnet custom'
       inputs:
-        testSelector: 'testRun'
-        searchFolder: '$(System.DefaultWorkingDirectory)/AssetStoreBackend/AuthenticationService.Tests'
-        codeCoverageEnabled: true
+        command: custom
+        projects: '$(System.DefaultWorkingDirectory)/AssetStoreBackend/AuthenticationService.Tests'
+        custom: vstest
+        arguments: '--logger:trx;logfilename=TEST.xml'
+      timeoutInMinutes: 120
 
 
 - stage: Deploy
   displayName: Deploy to Dev
-  dependsOn: Build
+  dependsOn: SecurityTests
   variables: 
     acrsecret: arc-secret
   jobs:
