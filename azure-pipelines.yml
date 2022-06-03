@@ -53,12 +53,10 @@ stages:
     - task: DotNetCoreCLI@2
       displayName: 'dotnet custom'
       inputs:
-        command: custom
-        projects: '$(System.DefaultWorkingDirectory)/AssetStoreBackend/AuthenticationService.Tests.dll'
-        custom: vstest
-        arguments: '--logger:trx;logfilename=TEST.xml'
-      timeoutInMinutes: 120
-
+        command: test
+        projects: '**/*.Tests.csproj'
+        arguments: '--configuration $(buildConfiguration)'
+        workingDirectory: './AssetStoreBackend'
 
 - stage: Deploy
   displayName: Deploy to Dev
