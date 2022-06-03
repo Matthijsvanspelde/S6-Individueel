@@ -54,7 +54,7 @@ stages:
       displayName: 'dotnet custom'
       inputs:
         command: custom
-        projects: '$(System.DefaultWorkingDirectory)/AssetStoreBackend/AuthenticationService.Tests'
+        projects: '$(System.DefaultWorkingDirectory)/AssetStoreBackend/AuthenticationService.Tests.dll'
         custom: vstest
         arguments: '--logger:trx;logfilename=TEST.xml'
       timeoutInMinutes: 120
