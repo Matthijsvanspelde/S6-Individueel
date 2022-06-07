@@ -1,0 +1,94 @@
+# Docker
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- main
+
+resources:
+- repo: self
+
+variables:
+  imageRepo: AuthenticationService
+  tag: '$(Build.BuildId)'
+
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: Docker@2
+      displayName: Build an image
+      inputs:
+        command: build
+        dockerfile: '$(Build.SourcesDirectory)/AssetStoreBackend/AuthenticationService/Dockerfile'
+        tags: |
+              $(tag)
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'AssetStoreImageRegistry'
+        repository: '$(imageRepo)'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+        tags: |
+          $(tag)
+          latest
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Build.SourcesDirectory)/K8S'
+        artifact: 'manifests'
+        publishLocation: 'pipeline'
+        
+- stage: SecurityTests
+  displayName: Test Security
+  dependsOn: Build
+  jobs:
+  - job: AuthenticationServiceTests
+    displayName: AuthenticationService Tests
+    steps:
+    - task: DotNetCoreCLI@2
+      displayName: 'dotnet custom'
+      inputs:
+        command: test
+        projects: '**/*.Tests.csproj'
+        arguments: '--configuration $(buildConfiguration)'
+        workingDirectory: './AssetStoreBackend'
+
+- stage: Deploy
+  displayName: Deploy to Dev
+  dependsOn: SecurityTests
+  variables: 
+    acrsecret: arc-secret
+  jobs:
+  - deployment: Deploy
+    displayName: Deploy to AKS
+    environment: 'Dev.default'
+    pool:
+      vmImage: ubuntu-latest
+    strategy:
+      runOnce:
+        deploy:         
+          steps: 
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: 'current'
+              artifactName: 'manifests'
+              targetPath: '$(Pipeline.Workspace)/manifests'
+          - task: KubernetesManifest@0
+            inputs:
+              action: 'createSecret'
+              namespace: 'default'
+              secretType: 'dockerRegistry'
+              secretName: '$(acrsecret)'
+              dockerRegistryEndpoint: 'AssetStoreImageRegistry'
+          - task: KubernetesManifest@0
+            inputs:
+              action: 'deploy'
+              namespace: 'default'
+              manifests: |
+                $(Pipeline.Workspace)/manifests/auth-depl.yaml
+                $(Pipeline.Workspace)/manifests/auth-service.yaml
