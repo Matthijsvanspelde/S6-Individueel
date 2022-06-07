@@ -84,7 +84,7 @@ stages:
               namespace: 'default'
               secretType: 'dockerRegistry'
               secretName: '$(acrsecret)'
-              dockerRegistryEndpoint: 'AssetStoreRegistry'
+              dockerRegistryEndpoint: 'AssetStoreImageRegistry'
           - task: KubernetesManifest@0
             inputs:
               action: 'deploy'
