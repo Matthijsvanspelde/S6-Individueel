@@ -43,15 +43,6 @@ stages:
         artifact: 'manifests'
         publishLocation: 'pipeline'
 
-- stage: Sonarcloud
-  displayName: Run Code Analysis
-  dependsOn: Build
-  jobs:
-  - job:  CodeAnalysis
-    displayName:  Code Analysis
-    steps:
-    - task: SonarCloudAnalyze@1
-
 - stage: SecurityTests
   displayName: Test Security
   dependsOn: SonarCloud
