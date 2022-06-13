@@ -45,7 +45,7 @@ stages:
 
 - stage: SecurityTests
   displayName: Test Security
-  dependsOn: SonarCloud
+  dependsOn: Build
   jobs:
   - job: AuthenticationServiceTests
     displayName: AuthenticationService Tests
