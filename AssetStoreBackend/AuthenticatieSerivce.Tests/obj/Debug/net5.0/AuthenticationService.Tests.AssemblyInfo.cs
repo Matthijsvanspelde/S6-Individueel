@@ -11,8 +11,8 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("AuthenticationService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Matthijs\\Documents\\GitHub\\S6-Individueel\\AssetStoreBackend\\Authenticatio" +
-    "nService", "AuthenticationService.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("AuthenticationService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Matth\\Documents\\Github\\S6-Individueel\\AssetStoreBackend\\AuthenticationSe" +
+    "rvice", "AuthenticationService.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthenticationService.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
