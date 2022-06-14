@@ -92,3 +92,17 @@ stages:
               manifests: |
                 $(Pipeline.Workspace)/manifests/auth-depl.yaml
                 $(Pipeline.Workspace)/manifests/auth-service.yaml
+
+- stage: PerformanceTests
+  displayName: Test performance
+  dependsOn: Deploy
+  jobs:
+  - job: PerformanceTests
+    displayName: Performance Tests
+    steps:
+    - task: AzureLoadTest@1
+      inputs:
+        azureSubscription: 'Azure for Students(9108ed7b-2570-4865-b209-cff426bf8f66)'
+        loadTestConfigFile: 'load_test.yml'
+        resourceGroup: 'AssetStore_group'
+        loadTestResource: 'Asset-store-northeurope'
