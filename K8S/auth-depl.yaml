@@ -23,7 +23,7 @@ kind: Service
 metadata:
   name: auth-clusterip-srv
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: authservice
   ports:
@@ -31,3 +31,5 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 80
+
+    
