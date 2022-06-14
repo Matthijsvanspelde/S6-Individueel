@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: authservice
-          image: assetstoreimageregistry.azurecr.io/authenticatieservice:latest
+          image: matthijs1999/authenticatieservice:latest
           ports:
             - containerPort: 80
 ---
