@@ -21,6 +21,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-resource-group: AssetStore_group
   name: authservice
 spec:
   type: LoadBalancer
