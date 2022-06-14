@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: assetservice
-          image: assetstoreregistry.azurecr.io/assetservice:latest
+          image: assetstoreimageregistry.azurecr.io/assetservice:latest
           ports:
           - containerPort: 80
 ---
