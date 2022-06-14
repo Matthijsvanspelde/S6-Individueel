@@ -21,15 +21,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: auth-clusterip-srv
+  name: authservice
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
   type: LoadBalancer
+  ports:
+  - port: 80
   selector:
     app: authservice
-  ports:
-  - name: authservice
-    protocol: TCP
-    port: 80
-    targetPort: 80
 
     
