@@ -14,21 +14,19 @@ spec:
     spec:
       containers:
         - name: authservice
-          image: matthijs1999/authenticatieservice:latest
+          image: authenticatieservice:latest
           ports:
             - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: authservice
-  annotations:
-    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+  name: assetservice
 spec:
   type: LoadBalancer
   ports:
   - port: 80
   selector:
-    app: authservice
+    app: assetservice
 
     
