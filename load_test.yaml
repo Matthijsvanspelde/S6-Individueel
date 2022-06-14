@@ -1,0 +1,17 @@
+testName: Get_aks-helloworld.f0995e9172f2422bbbfb.uksouth.aksapp.io
+testPlan: quick_test.jmx
+description: 
+engineInstances: 1
+env:
+- name: domain
+  value: aks-helloworld.f0995e9172f2422bbbfb.uksouth.aksapp.io
+- name: protocol
+  value: http
+- name: path
+  value: ''
+- name: threads_per_engine
+  value: 5
+- name: ramp_up_time
+  value: 0
+- name: duration_in_sec
+  value: 120
