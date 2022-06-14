@@ -103,6 +103,6 @@ stages:
     - task: AzureLoadTest@1
       inputs:
         azureSubscription: 'Azure for Students(9108ed7b-2570-4865-b209-cff426bf8f66)'
-        loadTestConfigFile: 'load_test.yml'
+        loadTestConfigFile: '$(Build.SourcesDirectory)/load_test.yml'
         resourceGroup: 'AssetStore_group'
         loadTestResource: 'Asset-store-northeurope'
