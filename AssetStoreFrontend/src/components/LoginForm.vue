@@ -50,7 +50,8 @@ export default {
             console.log(result.data.token);
             localStorage.setItem("token", result.data.token);
             localStorage.setItem("expiration", result.data.expiration);
-            this.props.history.push('/');
+            //this.props.history.push('/');
+            this.$router.push('/') 
         })
     },
   },

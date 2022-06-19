@@ -1,16 +1,16 @@
 <template>
 <div class="d-flex flex-column justify-content-center">
-  <div class="p-2 container"><LoginForm/></div>
+  <div class="p-2 container"><RegisterForm/></div>
 </div>
   
 </template>
 
 <script>
-import LoginForm from "@/components/LoginForm.vue";
+import RegisterForm from "@/components/RegisterForm.vue";
 export default {
-  name: "LoginView",
+  name: "RegisterrView",
   components: {
-    LoginForm
+    RegisterForm
   }
 }
 </script>

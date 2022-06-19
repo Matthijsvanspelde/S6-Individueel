@@ -1,6 +1,7 @@
 ﻿using Assetservice.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AssetService.Models
 {
@@ -8,7 +9,7 @@ namespace AssetService.Models
     {
         [Key]
         [Required]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [Required]
         public string Username { get; set; }
         [Required]

@@ -58,10 +58,10 @@ namespace AssetService.EventProcessing
                 var repo = scope.ServiceProvider.GetRequiredService<IAssetRepository>();
 
                 var userPublishedDto = JsonSerializer.Deserialize<UserPublishDto>(userPublishedMessage);
-
                 try
                 {
                     var user = _mapper.Map<User>(userPublishedDto);
+                    user.Id = null;
                     if (!repo.ExternalUserExists(user.ExternalId))
                     {
                         repo.CreateUser(user);

@@ -1,5 +1,6 @@
 ﻿using Assetservice.Models;
 using AssetService.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +41,10 @@ namespace Assetservice.Data
 
         public IEnumerable<Asset> GetAllAssets()
         {
-            return _context.Assets.ToList();
+            return _context.Assets
+                .Include(a => a.User)
+                .OrderByDescending(a => a.Id)
+                .ToList();
         }
 
         public IEnumerable<User> GetAllUsers()
@@ -51,6 +55,11 @@ namespace Assetservice.Data
         public Asset GetAssetById(int id)
         {
             return _context.Assets.FirstOrDefault(a => a.Id == id);
+        }
+
+        public User GetUserById(int id)
+        {
+            return _context.Users.FirstOrDefault(a => a.Id == id);
         }
 
         public bool SaveChanges()

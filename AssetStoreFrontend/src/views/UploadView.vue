@@ -1,5 +1,5 @@
 <template>
-<div class="d-flex flex-column justify-content-center">
+<div v-if="this.isLoggedIn" class="d-flex flex-column justify-content-center ucontainer">
   <div class="p-2"><UploadForm/></div>
 </div>
   
@@ -11,6 +11,11 @@ export default {
   name: "HomeView",
   components: {
     UploadForm
+  },
+  computed: {
+    isLoggedIn() {
+      return !!window.localStorage.getItem('token')
+    }
   }
 }
 </script>
@@ -25,7 +30,9 @@ export default {
 }
 
 
-.container {
-  max-width: 900px !important;
+.ucontainer {
+  left: 27%;
+  margin-top: 80px;
+  max-width: 900px;
 }
 </style>

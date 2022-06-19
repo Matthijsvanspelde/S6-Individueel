@@ -1,12 +1,17 @@
 <template>
 <div>
 <div class="card">
+ 
   <h5 class="card-header">
-    Asset Name
+    {{this.title}}
   </h5>
+  <img class="card-img-top" src="/src/assets/Banner.png" alt="Card image cap">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Download</a>
+    <p class="card-text">{{this.description}}</p>
+    <a v-on:click="onSubmit()" href="#" class="btn btn-primary">Download</a>
+  </div>
+  <div class="card-footer">
+      <small class="text-muted">Last updated 6 mins ago by <b>{{this.user}}</b></small>
   </div>
 </div>
 </div>
@@ -19,12 +24,37 @@ export default {
   name: "AssetTile",
   props: {
     title: String,
-    description: String
+    description: String,
+    user: Array
+  },
+  data () {
+        return {
+
+        }
+    },
+    methods: {
+    onSubmit () {
+        this.axios
+        .get('https://localhost:5001/api/asset/download/2', { responseType: 'blob' })
+        .then(result => {
+          var fileURL = window.URL.createObjectURL(new Blob([result.data]));
+          var fileLink = document.createElement('a');
+        
+          fileLink.href = fileURL;
+          fileLink.setAttribute('download', 'animaties.zip');
+          document.body.appendChild(fileLink);
+        
+          fileLink.click();
+
+        })
+    },
   }
 }
 </script>
 
 <style scoped>
+
+
 .item {
   width: 228px;
   height: 228px;

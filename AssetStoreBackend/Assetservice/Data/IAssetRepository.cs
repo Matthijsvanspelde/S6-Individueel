@@ -14,6 +14,7 @@ namespace Assetservice.Data
 
         bool ExternalUserExists(int externalUserId);
         void CreateUser(User user);
-        IEnumerable<User> GetAllUsers();
+        User GetUserById(int id);
+        IEnumerable<User> GetAllUsers(); 
     }
 }

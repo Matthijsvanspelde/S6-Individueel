@@ -206,7 +206,7 @@ C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\ob
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\AssetService.RazorTargetAssemblyInfo.cache
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\AssetService.csproj.CopyComplete
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\AssetService.dll
-C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\refint\AssetService.dll
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\AssetService.pdb
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\AssetService.genruntimeconfig.cache
 C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\ref\AssetService.dll
+C:\Users\Matth\Documents\Github\S6-Individueel\AssetStoreBackend\Assetservice\obj\Debug\net5.0\refint\AssetService.dll

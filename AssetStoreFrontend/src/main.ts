@@ -6,7 +6,6 @@ import VueAxios from 'vue-axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import { BootstrapIconsPlugin } from 'bootstrap-icons-vue';
-
 const app = createApp(App);
 app.use(VueAxios, axios)
 app.use(router);

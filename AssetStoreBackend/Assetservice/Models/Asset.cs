@@ -1,6 +1,8 @@
 ﻿using AssetService.Models;
 using Microsoft.AspNetCore.Http;
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Assetservice.Models
 {
@@ -14,7 +16,7 @@ namespace Assetservice.Models
         [Required]
         public string Description { get; set; }
         [Required]
-        public string FileName { get; set; }
+        public Guid FileName { get; set; }
         [Required]
         public int UserId { get; set; }
         [Required]

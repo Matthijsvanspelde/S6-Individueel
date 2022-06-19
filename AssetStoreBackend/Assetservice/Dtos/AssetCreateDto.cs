@@ -12,5 +12,7 @@ namespace Assetservice.Dtos
         public string Description { get; set; }
         [Required]
         public IFormFile File { get; set; }
+        [Required]
+        public IFormFile CoverImage { get; set; }
     }
 }

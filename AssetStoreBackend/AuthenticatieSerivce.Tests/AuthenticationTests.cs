@@ -35,6 +35,7 @@ namespace AuthenticatieSerivce.Tests
             var response = await client.PostAsync("/api/authentication/register", formContent);
             Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
         }
+
         [Fact]
         public async Task GivenInvalidPassword_ThenInternalServerError()
         {
